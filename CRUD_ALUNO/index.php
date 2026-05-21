@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 </head>
-<body style="font-family: helvetica;">
+<body style="font-family: helvetica; ">
     <form action="">
         <p align="center">
             <font size="7" face="Arial">U.C Testes de Sistemas - SENAI SC</font>
@@ -27,7 +27,7 @@
                     </form>
                 </td>
                 <td>
-                    <form method="POST" action="formMatricula.php" >
+                    <form method="POST" action="../CRUD_MATRICULA/formMatricula.php" >
                         <center>
                             <input type="submit" value="Cadastrar Matricula">
                         </center>

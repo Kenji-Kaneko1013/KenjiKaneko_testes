@@ -184,7 +184,7 @@
         </table><br>
         <nav align="center">
             <a href="index.php">| Home |</a>
-            <a href="formMatricula.php"> Matricula |</a>
+            <a href="../CRUD_MATRICULA/formMatricula.php"> Matricula |</a>
         </nav>
         <hr>
         <p align="center">Prof. Sergio Luiz da Silveira</p> 

@@ -120,8 +120,8 @@
             </tr>
         </table><br>
         <nav align="center">
-            <a href="index.php">| Home |</a>
-            <a href="formMatricula.php"> Matricula |</a>
+            <a href="../CRUD_ALUNO/index.php">| Home |</a>
+            <a href="../CRUD_ALUNO/formAluno.php"> Aluno |</a>
         </nav>
         <hr>
         <p align="center">Prof. Sergio Luiz da Silveira</p> 
