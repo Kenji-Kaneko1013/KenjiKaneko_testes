@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">	
     <title>Cadastro Aluno</title>
     <script>
         function fMasc(objeto,mascara){
@@ -66,42 +67,42 @@
         <!--<form method="POST" action="../tests/verifica_form.php" align="center"> -->
 
         <!-- RETIRE O COMENTARIO DA LINHA ABAIXO PARA REALIZAR OS TESTES e DEPOIS COMENTE NOVAMENTE-->
-        <form method="POST" action="cadastro.php" align="center"> <!--Problema: o Action não tava com o diretorio cadastro.php (diretorio errado:../tests/valida_form_grava.php)-->
+        <form method="POST" action="cadastro.php" align="items-center"> <!--Problema: o Action não tava com o diretorio cadastro.php (diretorio errado:../tests/valida_form_grava.php)-->
                 
             <table width="500" border="0" cellspacing="0" cellspading="0" align="center">
                 <tr>
                     <td align="left">Nome do Aluno(a):</td>
-                    <td><input type="text" size="30" name="Nome"></td>
+                    <td><input type="text" size="30" class="form-control" name="Nome"></td>
                 </tr>
                 <tr>
                     <td align="left">Data de Nascimento:</td>
-                    <td><input type="text" size="30" name="DataNasc" placeholder="aaaa/mm/dd" maxlength="10" onkeydown="javascript:fMasc(this,mData)"></td>
+                    <td><input type="text" size="30" class="form-control" name="DataNasc" placeholder="aaaa/mm/dd" maxlength="10" onkeydown="javascript:fMasc(this,mData)"></td>
                 </tr>
                 <tr>
                     <td align="left">Nome do Pai:</td>
-                    <td><input type="text" size="30" name="NomePai"></td>
+                    <td><input type="text" size="30" class="form-control" name="NomePai"></td>
                 </tr>
                 <tr>
                     <td align="left">Nome da Mãe:</td>
-                    <td><input type="text" size="30" name="NomeMae"></td>
+                    <td><input type="text" size="30" class="form-control" name="NomeMae"></td>
                 </tr>
                 <tr>
                     <td align="left">Telefone:</td>
-                    <td><input type="text" size="30" name="Telefone" maxlength="14" onkeydown="javascript:fMasc(this,mTel);"></td>
+                    <td><input type="text" size="30" class="form-control" name="Telefone" maxlength="14" onkeydown="javascript:fMasc(this,mTel);"></td>
                 </tr>
                 <tr>
                     <td align="left">E-Mail</td>
-                    <td><input type="text" size="30" name="Email"></td>
+                    <td><input type="text" size="30" class="form-control" name="Email"></td>
                 </tr>
                 <tr>
                     <td align="left">Sexo</td>
-                    <td><input type="radio" name="Sexo" value="Masculino">Masculino</td>
-                    <td><input type="radio" name="Sexo" value="Feminino">Feminino</td>
+                    <td class="form-check form-check-inline"><input type="radio" class="form-check-input" name="Sexo" value="Masculino">Masculino</td>
+                    <td class="form-check form-check-inline"><input type="radio" class="form-check-input" name="Sexo" value="Feminino">Feminino</td>
                 </tr>
                 <tr>
                     <td align="left">Bairro</td>
                     <td>
-                        <select name="Bairro" size="1">
+                        <select class="form-select form-select-sm" name="Bairro" size="1">
                             <option></option>
                             <option>Agua Verde</option>
                             <option>Alto da XV</option>
@@ -122,39 +123,43 @@
                     </td>
                 </tr>
             </table><br>
-            <center>  
-                <input type="reset" value="Limpar Dados" >
-                <input type="submit" value="Cadastrar Aluno">
-            </center>
+            <div class="col-auto">
+                <center>  
+                    <input type="reset" class="btn btn-danger  btn-sm" value="Limpar Dados" >
+                    <input type="submit" class="btn btn-success  btn-sm" value="Cadastrar Aluno">
+                </center>
+            </div>
         </form>
         <hr width="100%" align="center" size="3" color="blue">
         <table width="400" border="0" cellspacing="0" cellspading="0" align="center">
             <tr>
                 <td>
                     <form method="POST" action="listar.php">
-                        <center><input type="submit" value="Listar Alunos"></center>
+                        <center><input type="submit" class="btn btn-primary btn-sm" value="Listar Alunos"></center>
                     </form>
                 </td>
                 <td>
                     <form method="POST" action="procurar.php">
-                        <center><input type="submit" value="Consultar Aluno"></center>
+                        <center><input type="submit" class="btn btn-info btn-sm" value="Consultar Aluno"></center>
                     </form>
                 </td>
                 <td>
                     <form method="POST" action="atualizar.php">
-                        <center><input type="submit" value="Atualizar Dados do  Aluno"></center>
+                        <center><input type="submit" class="btn btn-warning btn-sm" value="Atualizar Dados do  Aluno"></center>
                     </form>
                 </td>
                 <td>
                     <form method="POST" action="apagar.php">
-                        <center><input type="submit" value="Excluir Dados do  Aluno"></center>
+                        <center><input type="submit" class="btn btn-danger btn-sm" value="Excluir Dados do  Aluno"></center>
                     </form>
                 </td>
             </tr>
         </table><br>
         <nav align="center">
-            <a href="index.php">| Home |</a>
-            <a href="../CRUD_MATRICULA/formMatricula.php"> Matricula |</a>
+            <div class="btn-group">
+                <a href="index.php">| Home |</a>
+                <a href="../CRUD_MATRICULA/formMatricula.php"> Matricula |</a>
+            </div>
         </nav>
         <hr>
         <p align="center">Prof. Sergio Luiz da Silveira</p> 
