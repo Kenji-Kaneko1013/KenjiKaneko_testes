@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <?php include('../estrutura/css.php'); ?>
     <title>Formulário Matricula</title>
 </head>
 <body style="font-family: helvetica;">
     <form>
-        <p align="center">
-            <font size="7">U.C Teste de Sistemas - U.C Testes de Sistemas - SENAI SC</font>
+        <!-- Navbar -->
+        <?php include('../estrutura/navbar2.php'); ?>
         </p>
     </form>
     <h4>
@@ -100,5 +100,8 @@
     </nav>
     <hr>
     <p align="center">Prof. Sergio Luiz da Silveira</p>
+<!-- JS -->
+<?php include('../estrutura/js.php'); ?>
+<!-- Fim JS -->   
 </body>
 </html>

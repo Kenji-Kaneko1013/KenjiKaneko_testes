@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">	
+    <?php include('../estrutura/css.php'); ?>
     <title>Cadastro Aluno</title>
     <script>
         function fMasc(objeto,mascara){
@@ -42,11 +42,10 @@
 
     </script>
 </head>
-<body style="font-family: helvetica;">
-    
+<body style="font-family: helvetica;">    
         <form>
-            <p align="center">
-                <font size="7" face="Arial">U.C Testes de Sistemas - SENAI SC</font>
+            <!-- Navbar -->
+            <?php include('../estrutura/navbar.php'); ?>
             </p>
         </form>
         <h4>
@@ -129,39 +128,11 @@
                     <input type="submit" class="btn btn-success  btn-sm" value="Cadastrar Aluno">
                 </center>
             </div>
+            <hr>
+            <p align="center">Prof. Sergio Luiz da Silveira</p> 
         </form>
-        <hr width="100%" align="center" size="3" color="blue">
-        <table width="400" border="0" cellspacing="0" cellspading="0" align="center">
-            <tr>
-                <td>
-                    <form method="POST" action="listar.php">
-                        <center><input type="submit" class="btn btn-primary btn-sm" value="Listar Alunos"></center>
-                    </form>
-                </td>
-                <td>
-                    <form method="POST" action="procurar.php">
-                        <center><input type="submit" class="btn btn-info btn-sm" value="Consultar Aluno"></center>
-                    </form>
-                </td>
-                <td>
-                    <form method="POST" action="atualizar.php">
-                        <center><input type="submit" class="btn btn-warning btn-sm" value="Atualizar Dados do  Aluno"></center>
-                    </form>
-                </td>
-                <td>
-                    <form method="POST" action="apagar.php">
-                        <center><input type="submit" class="btn btn-danger btn-sm" value="Excluir Dados do  Aluno"></center>
-                    </form>
-                </td>
-            </tr>
-        </table><br>
-        <nav align="center">
-            <div class="btn-group">
-                <a href="index.php">| Home |</a>
-                <a href="../CRUD_MATRICULA/formMatricula.php"> Matricula |</a>
-            </div>
-        </nav>
-        <hr>
-        <p align="center">Prof. Sergio Luiz da Silveira</p> 
+<!-- JS -->
+<?php include('../estrutura/js.php'); ?>
+<!-- Fim JS -->
 </body>
 </html>

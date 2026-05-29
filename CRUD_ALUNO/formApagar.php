@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include('../estrutura/css.php'); ?>
     <title>Apagar</title>
 </head>
 <body style="font-family: helvetica;">
-        <p align="center">
-            <font size="7" face="Arial">U.C Testes de Sistemas - SENAI SC</font>
+    <form>
+        <!-- Navbar -->
+        <?php include('../estrutura/navbar.php'); ?>
         </p>
+    </form>
     <h4>
         <font color="red">
             <center>Apagar o Aluno</center>
@@ -63,79 +66,50 @@
                 <input type="hidden" name="ID" value="<?=$ID?>">
                 <tr>
                     <td align="left">Nome do Aluno(a):</td>
-                    <td><input type="text" size="30" name="Nome" value="<?=$nome?>" disabled></td>
+                    <td><input type="text" size="30" class="form-control" name="Nome" value="<?=$nome?>" disabled></td>
                 </tr>
                 <tr>
                     <td align="left">Data de Nascimento:</td>
-                    <td><input type="text" size="30" name="DataNasc" placeholder="aaaa/mm/dd" maxlength="10" value="<?=$dataNasc?>" disabled onkeydown="javascript:fMasc(this,mData)"></td>
+                    <td><input type="text" size="30" class="form-control" name="DataNasc" placeholder="aaaa/mm/dd" maxlength="10" value="<?=$dataNasc?>" disabled onkeydown="javascript:fMasc(this,mData)"></td>
                 </tr>
                 <tr>
                     <td align="left">Nome do Pai:</td>
-                    <td><input type="text" size="30" name="NomePai" value="<?=$nomePai?>" disabled></td>
+                    <td><input type="text" size="30" class="form-control" name="NomePai" value="<?=$nomePai?>" disabled></td>
                 </tr>
                 <tr>
                     <td align="left">Nome da Mãe:</td>
-                    <td><input type="text" size="30" name="NomeMae" value="<?=$nomeMae?>" disabled></td>
+                    <td><input type="text" size="30" class="form-control" name="NomeMae" value="<?=$nomeMae?>" disabled></td>
                 </tr>
                 <tr>
                     <td align="left">Telefone:</td>
-                    <td><input type="text" size="30" name="Telefone" maxlength="14" value="<?=$telefone?>" onkeydown="javascript:fMasc(this,mTel);" disabled></td>
+                    <td><input type="text" size="30" class="form-control" name="Telefone" maxlength="14" value="<?=$telefone?>" onkeydown="javascript:fMasc(this,mTel);" disabled></td>
                 </tr>
                 <tr>
                     <td align="left">E-Mail</td>
-                    <td><input type="text" size="30" name="Email" value="<?=$email?>" disabled></td>
+                    <td><input type="text" size="30" class="form-control" name="Email" value="<?=$email?>" disabled></td>
                 </tr>
                 <tr>
                     <td align="left">Sexo</td>
                     <td>
-                        <input type="text" size="30" value="<?=$sexo?>" disabled>
+                        <input type="text" size="30" class="form-control" value="<?=$sexo?>" disabled>
                     </td>
                 </tr>
                 <tr>
                     <td align="left">Bairro</td>
                     <td>
-                        <input type="text" size="30" value="<?=$bairro?>" disabled>
+                        <input type="text" size="30" class="form-control" value="<?=$bairro?>" disabled>
                     </td>
                 </tr>
             </table><br>
             <center>  
                 Tem certeza que deseja deletar este aluno(a)? <br>
-                <input type="submit" value="Deletar Aluno(a)">
+                <input type="submit" class="btn btn-danger btn-sm" value="Deletar Aluno(a)">
             </center>
         </form>
-
-
-<hr width="100%" align="center" size="3" color="blue">
-        <table width="400" border="0" cellspacing="0" cellspading="0" align="center">
-            <tr>
-            <td>
-                    <form method="POST" action="formAluno.php">
-                        <center><input type="submit" value="Registrar Novo Aluno"></center>
-                    </form>
-                </td>
-                <td>
-                    <form method="POST" action="listar.php">
-                        <center><input type="submit" value="Listar Alunos"></center>
-                    </form>
-                </td>
-                <td>
-                    <form method="POST" action="atualizar.php">
-                        <center><input type="submit" value="Atualizar Dados do  Aluno"></center>
-                    </form>
-                </td>
-                <td>
-                    <form method="POST" action="procurar.php">
-                        <center><input type="submit" value="Consultar Aluno"></center>
-                    </form>
-                </td>
-            </tr>
-        </table><br>
-        <nav align="center">
-            <a href="index.php">| Home |</a>
-            <a href="../CRUD_MATRICULA/formMatricula.php"> Matricula |</a>
-        </nav>
-
     <hr>
     <p align="center">Prof. Sergio Luiz da Silveira</p> 
+<!-- JS -->
+<?php include('../estrutura/js.php'); ?>
+<!-- Fim JS -->        
 </body>
 </html>

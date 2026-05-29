@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include('../estrutura/css.php'); ?>
     <title>CadMatricula</title>
 </head>
 <body style="font-family: helvetica;">
     <form>
-        <p align="center">
-            <font size="7" face="Arial">U.C Testes de Sistemas - SENAI SC</font>
+        <!-- Navbar -->
+        <?php include('../estrutura/navbar.php'); ?>
         </p>
     </form>
     <h4>
@@ -66,42 +67,10 @@ if(isset($sucesso)) echo '<div style="color:#00F" align="center">'.$sucesso.'</d
 
 
 ?>
-
-<hr width="100%" align="center" size="3" color="blue">
-        <table width="400" border="0" cellspacing="0" cellspading="0" align="center">
-            <tr>
-            <td>
-                    <form method="POST" action="formAluno.php">
-                        <center><input type="submit" value="Registrar Novo Aluno"></center>
-                    </form>
-                </td>
-                <td>
-                    <form method="POST" action="listar.php">
-                        <center><input type="submit" value="Listar Alunos"></center>
-                    </form>
-                </td>
-                <td>
-                    <form method="POST" action="procurar.php">
-                        <center><input type="submit" value="Consultar Aluno"></center>
-                    </form>
-                </td>
-                <td>
-                    <form method="POST" action="atualizar.php">
-                        <center><input type="submit" value="Atualizar Dados do  Aluno"></center>
-                    </form>
-                </td>
-                <td>
-                    <form method="POST" action="apagar.php">
-                        <center><input type="submit" value="Excluir Dados do  Aluno"></center>
-                    </form>
-                </td>
-            </tr>
-        </table><br>
-        <nav align="center">
-            <a href="index.php">| Home |</a>
-            <a href="../CRUD_MATRICULA/formMatricula.php"> Matricula |</a>
-        </nav>
-        <hr>
-        <p align="center">Prof. Sergio Luiz da Silveira</p> 
+<hr>
+<p align="center">Prof. Sergio Luiz da Silveira</p> 
+<!-- JS -->
+<?php include('../estrutura/js.php'); ?>
+<!-- Fim JS -->   
 </body>
 </html>

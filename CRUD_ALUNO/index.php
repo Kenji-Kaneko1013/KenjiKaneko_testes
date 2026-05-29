@@ -3,41 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">		
+    <?php include('../estrutura/css.php'); ?>	
     <title>Home</title>
 </head>
 <body style="font-family: helvetica;">
-    <form action="">
-        <p align="center">
-            <font size="7" face="Arial">U.C Testes de Sistemas - SENAI SC</font>
+    <form>
+        <!-- Navbar -->
+        <?php include('../estrutura/navbar.php'); ?>
         </p>
-        </form>
+    </form>
+    <form align="center">
         <h4>
             <center>Formulario de Cadastro do Aluno</center>
         </h4>
         <hr width="100%" align="center" size="3" color="blue"> <br>
 
-        <table align="center">
-            <tr>
-
-                <td>
-                    <form method="POST" action="formAluno.php" >
-                        <center>
-                            <input type="submit" value="Cadastrar Aluno">
-                        </center>
-                    </form>
-                </td>
-                <td>
-                    <form method="POST" action="../CRUD_MATRICULA/formMatricula.php" >
-                        <center>
-                            <input type="submit" value="Cadastrar Matricula">
-                        </center>
-                    </form>
-                </td>
-                
-            </tr>
-        </table>
-        <hr>
+        <hr align="bottom">
         <p align="center">Prof. Sergio Luiz da Silveira</p> 
+    </form>
+<!-- JS -->
+<?php include('../estrutura/js.php'); ?>
+<!-- Fim JS -->       
 </body>
 </html>

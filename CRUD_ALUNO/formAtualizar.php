@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include('../estrutura/css.php'); ?>
     <title>Atualizar</title>
     <script>
         function fMasc(objeto,mascara){
@@ -42,12 +43,11 @@
     </script>
 </head>
 <body style="font-family: helvetica;">
-    
-        <form>
-            <p align="center">
-                <font size="7" face="Arial">U.C Testes de Sistemas - SENAI SC</font>
-            </p>
-        </form>
+    <form>
+        <!-- Navbar -->
+        <?php include('../estrutura/navbar.php'); ?>
+        </p>
+    </form>
         <h4>
             <font color="green">
                 <center>Formulário de Alteração de Dados do Aluno</center></font>
@@ -94,43 +94,42 @@
             $conexao->close();
         }   
 ?>
-
         <form method="POST" action="atualiza.php" align="center">
             <table width="500" border="0" cellspacing="0" cellspading="0" align="center">
-                <input type="hidden" name="ID" value="<?=$ID?>">
+                <input type="hidden" name="ID" value="<?=$ID?>">            
                 <tr>
                     <td align="left">Nome do Aluno(a):</td>
-                    <td><input type="text" size="30" name="Nome" value="<?=$nome?>"></td>
+                    <td><input type="text" class="form-control" size="30" name="Nome" value="<?=$nome?>"></td>
                 </tr>
                 <tr>
                     <td align="left">Data de Nascimento:</td>
-                    <td><input type="text" size="30" name="DataNasc" placeholder="aaaa/mm/dd" maxlength="10" value="<?=$dataNasc?>" onkeydown="javascript:fMasc(this,mData)"></td>
+                    <td><input type="text" class="form-control" size="30" name="DataNasc" placeholder="aaaa/mm/dd" maxlength="10" value="<?=$dataNasc?>" onkeydown="javascript:fMasc(this,mData)"></td>
                 </tr>
                 <tr>
                     <td align="left">Nome do Pai:</td>
-                    <td><input type="text" size="30" name="NomePai" value="<?=$nomePai?>"></td>
+                    <td><input type="text" class="form-control" size="30" name="NomePai" value="<?=$nomePai?>"></td>
                 </tr>
                 <tr>
                     <td align="left">Nome da Mãe:</td>
-                    <td><input type="text" size="30" name="NomeMae" value="<?=$nomeMae?>"></td>
+                    <td><input type="text" class="form-control" size="30" name="NomeMae" value="<?=$nomeMae?>"></td>
                 </tr>
                 <tr>
                     <td align="left">Telefone:</td>
-                    <td><input type="text" size="30" name="Telefone" maxlength="14" value="<?=$telefone?>" onkeydown="javascript:fMasc(this,mTel);"></td>
+                    <td><input type="text" class="form-control" size="30" name="Telefone" maxlength="14" value="<?=$telefone?>" onkeydown="javascript:fMasc(this,mTel);"></td>
                 </tr>
                 <tr>
                     <td align="left">E-Mail</td>
-                    <td><input type="text" size="30" name="Email" value="<?=$email?>"></td>
+                    <td><input type="text" size="30" class="form-control" name="Email" value="<?=$email?>"></td>
                 </tr>
                 <tr>
                     <td align="left">Sexo</td>
-                    <td><input type="radio" name="Sexo" value="Masculino" <?php echo($sexo == 'Masculino') ? "checked" : ""; ?>>Masculino
-                    <input type="radio" name="Sexo" value="Feminino" <?php echo($sexo == 'Feminino') ? "checked" : ""; ?>>Feminino</td>
+                    <td class="form-check form-check-inline"><input type="radio" class="form-check-input" name="Sexo" value="Masculino" <?php echo($sexo == 'Masculino') ? "checked" : ""; ?>>Masculino</td>
+                    <td class="form-check form-check-inline"><input type="radio" class="form-check-input" name="Sexo" value="Feminino" <?php echo($sexo == 'Feminino') ? "checked" : ""; ?>>Feminino</td>
                 </tr>
                 <tr>
                     <td align="left">Bairro</td>
                     <td>
-                        <select name="Bairro" size="1">
+                        <select class="form-select form-select-sm" name="Bairro" size="1">
                             <option></option>
                             <option <?php echo($bairro == 'Agua Verde') ? "selected" : ""; ?>>Agua Verde</option>
                             <option <?php echo($bairro == 'Alto da XV') ? "selected" : ""; ?>>Alto da XV</option>
@@ -152,41 +151,15 @@
                 </tr>
             </table><br>
             <center>  
-                <input type="submit" value="Atualizar Dados">
-                <input type="reset" value="Limpar Dados">
+                <input type="submit" class="btn btn-success  btn-sm" value="Atualizar Dados">
+                <input type="reset" class="btn btn-danger  btn-sm" value="Limpar Dados">
             </center>
         </form>
         
-        <hr width="100%" align="center" size="3" color="blue">
-        <table width="400" border="0" cellspacing="0" cellspading="0" align="center">
-            <tr>
-                <td>
-                    <form method="POST" action="listar.php">
-                        <center><input type="submit" value="Listar Alunos"></center>
-                    </form>
-                </td>
-                <td>
-                    <form method="POST" action="procurar.php">
-                        <center><input type="submit" value="Consultar Aluno"></center>
-                    </form>
-                </td>
-                <td>
-                    <form method="POST" action="atualizar.php">
-                        <center><input type="submit" value="Atualizar Dados do  Aluno"></center>
-                    </form>
-                </td>
-                <td>
-                    <form method="POST" action="apagar.php">
-                        <center><input type="submit" value="Excluir Dados do  Aluno"></center>
-                    </form>
-                </td>
-            </tr>
-        </table><br>
-        <nav align="center">
-            <a href="index.php">| Home |</a>
-            <a href="../CRUD_MATRICULA/formMatricula.php"> Matricula |</a>
-        </nav>
         <hr>
         <p align="center">Prof. Sergio Luiz da Silveira</p> 
+<!-- JS -->
+<?php include('../estrutura/js.php'); ?>
+<!-- Fim JS -->   
 </body>
 </html>
